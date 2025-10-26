@@ -1,0 +1,36 @@
+import UIAbility from '@ohos.app.ability.UIAbility';
+import hilog from '@ohos.hilog';
+import window from '@ohos.window';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want, launchParam) {
+    hilog.info(0x0000, 'testTag', 'EntryAbility onCreate');
+  }
+
+  onDestroy() {
+    hilog.info(0x0000, 'testTag', 'EntryAbility onDestroy');
+  }
+
+  onWindowStageCreate(windowStage) {
+    hilog.info(0x0000, 'testTag', 'EntryAbility onWindowStageCreate');
+    windowStage.loadContent('pages/Index', (err, data) => {
+      if (err.code) {
+        hilog.error(0x0000, 'testTag', 'Failed to load content: %{public}s', JSON.stringify(err));
+        return;
+      }
+      hilog.info(0x0000, 'testTag', 'Succeeded in loading content');
+    });
+  }
+
+  onWindowStageDestroy() {
+    hilog.info(0x0000, 'testTag', 'EntryAbility onWindowStageDestroy');
+  }
+
+  onForeground() {
+    hilog.info(0x0000, 'testTag', 'EntryAbility onForeground');
+  }
+
+  onBackground() {
+    hilog.info(0x0000, 'testTag', 'EntryAbility onBackground');
+  }
+}

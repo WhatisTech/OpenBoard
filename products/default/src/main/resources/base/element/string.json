@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "Polish Keyboard"
+    },
+    {
+      "name": "module_desc",
+      "value": "Polish Keyboard Module"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "Polish Keyboard"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "Polish Keyboard Main Ability"
+    },
+    {
+      "name": "keyboard_label",
+      "value": "Polish Keyboard"
+    }
+  ]
+}
