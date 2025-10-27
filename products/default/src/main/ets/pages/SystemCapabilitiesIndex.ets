@@ -1,4 +1,4 @@
-import { BreakpointSystem, BreakPointType } from '@ohos/common';
+import { BreakpointSystem, BreakPointType } from '../utils/BreakpointSystem';
 import * as CommonConstants from '../constants/CommonConstants';
 
 /**

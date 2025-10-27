@@ -1,4 +1,4 @@
-import { BreakpointSystem, BreakPointType } from '@ohos/common';
+import { BreakpointSystem, BreakPointType } from '../utils/BreakpointSystem';
 import { GridComponent } from '../view/GridComponent';
 import * as CommonConstants from '../constants/CommonConstants';
 import { TabBarItem } from '../viewmodel/TabBarItem';
