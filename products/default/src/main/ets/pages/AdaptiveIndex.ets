@@ -1,4 +1,4 @@
-import { AdaptiveLayout } from '@ohos/adaptivelayout';
+import { AdaptiveLayout } from './AdaptiveLayout';
 import * as CommonConstants from '../constants/CommonConstants';
 
 /**

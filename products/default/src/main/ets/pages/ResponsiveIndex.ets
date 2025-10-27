@@ -1,4 +1,4 @@
-import { ResponsiveLayout } from '@ohos/responsivelayout';
+import { ResponsiveLayout } from './ResponsiveLayout';
 
 /**
  * ResponsiveIndex is the entry of the responsive layout pages.
