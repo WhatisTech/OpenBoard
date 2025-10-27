@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "OpenBoard Input Method Module"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "OpenBoard Entry Ability"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "OpenBoard"
+    },
+    {
+      "name": "keyboard_label",
+      "value": "OpenBoard Keyboard"
+    },
+    {
+      "name": "page_show",
+      "value": "page from package"
+    },
+    {
+      "name": "app_name",
+      "value": "OpenBoard"
+    },
+    {
+      "name": "location_cap_valid",
+      "value": "Location capability is supported"
+    },
+    {
+      "name": "location_cap_invalid",
+      "value": "Location capability is not supported"
+    },
+    {
+      "name": "grid_title_label",
+      "value": "Title"
+    }
+  ]
+}
