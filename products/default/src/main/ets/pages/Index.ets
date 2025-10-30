@@ -1,7 +1,7 @@
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Polish Keyboard App'
+  @State message: string = 'OpenBoard'
 
   build() {
     Row() {
