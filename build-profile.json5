@@ -30,13 +30,19 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "",          // Path to your .cer certificate file
-          "keyAlias": "",           // Your key alias (e.g., "debugKey")
-          "keyPassword": "",        // Your encrypted key password
-          "profile": "",            // Path to your .p7b provisioning profile
+          "certpath": "",
+          // Path to your .cer certificate file
+          "keyAlias": "",
+          // Your key alias (e.g., "debugKey")
+          "keyPassword": "",
+          // Your encrypted key password
+          "profile": "",
+          // Path to your .p7b provisioning profile
           "signAlg": "SHA256withECDSA",
-          "storeFile": "",          // Path to your .p12 keystore file
-          "storePassword": ""       // Your encrypted store password
+          "storeFile": "",
+          // Path to your .p12 keystore file
+          "storePassword": ""
+          // Your encrypted store password
         }
       }
     ],
@@ -51,9 +57,8 @@
         "name": "default",
         "signingConfig": "default",
         // SDK Version: HarmonyOS NEXT
-        "compileSdkVersion": "6.0.0(20)",
         "compatibleSdkVersion": "5.1.0(18)",
-        "targetSdkVersion": "6.0.0(20)",
+        "targetSdkVersion": "5.1.0(18)",
         // Runtime: Full HarmonyOS (not OpenHarmony)
         "runtimeOS": "HarmonyOS"
       }

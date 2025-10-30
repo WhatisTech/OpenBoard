@@ -36,7 +36,7 @@
     "extensionAbilities": [
       {
         "name": "InputMethodService",
-        "srcEntry": "./ets/InputMethodExtension/InputMethodService.ets",
+        "srcEntry": "./ets/InputMethodExtension/InputMethodService.ts",
         "icon": "$media:icon",
         "label": "$string:keyboard_label",
         "type": "inputMethod",

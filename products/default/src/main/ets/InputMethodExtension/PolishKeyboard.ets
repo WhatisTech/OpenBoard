@@ -1,11 +1,4 @@
 import { inputMethod } from '@ohos.InputMethod';
-import hilog from '@ohos.hilog';
-
-// Define the standard key color and radius
-const KEY_COLOR = '#3C3C3C'; // Medium Dark Gray for standard keys
-const SPECIAL_KEY_COLOR = '#505050'; // Darker Gray for functional keys
-const BACKGROUND_COLOR = '#1F1F1F'; // Very Dark Gray for keyboard background
-const KEY_RADIUS = 8; // Curved corners
 
 @Component
 export struct PolishKeyboard {
@@ -50,7 +43,7 @@ export struct PolishKeyboard {
     }
     .width('100%')
     .height(320)
-    .backgroundColor(BACKGROUND_COLOR) // Dark Background
+    .backgroundColor('#E5E5E5')
     .padding(8)
   }
 
@@ -60,11 +53,9 @@ export struct PolishKeyboard {
       ForEach(['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'], (num: string) => {
         Button(num)
           .fontSize(18)
-          .fontColor(Color.White)
           .width('10%')
           .height(50)
-          .backgroundColor(KEY_COLOR) // Key color
-          .borderRadius(KEY_RADIUS)
+          .backgroundColor(Color.White)
           .onClick(() => this.insertText(num))
       })
     }
@@ -78,11 +69,9 @@ export struct PolishKeyboard {
       ForEach(['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'], (symbol: string) => {
         Button(symbol)
           .fontSize(18)
-          .fontColor(Color.White)
           .width('10%')
           .height(50)
-          .backgroundColor(KEY_COLOR) // Key color
-          .borderRadius(KEY_RADIUS)
+          .backgroundColor(Color.White)
           .onClick(() => this.insertText(symbol))
       })
     }
@@ -96,11 +85,9 @@ export struct PolishKeyboard {
       ForEach(['-', '/', ':', ';', '(', ')', '$', '&', '@', '"'], (symbol: string) => {
         Button(symbol)
           .fontSize(18)
-          .fontColor(Color.White)
           .width('10%')
           .height(50)
-          .backgroundColor(KEY_COLOR) // Key color
-          .borderRadius(KEY_RADIUS)
+          .backgroundColor(Color.White)
           .onClick(() => this.insertText(symbol))
       })
     }
@@ -111,72 +98,53 @@ export struct PolishKeyboard {
 
   buildSymbolsThirdRow() {
     Row() {
-      // ABC Key (Special)
       Button('ABC')
         .fontSize(14)
-        .fontColor(Color.White)
         .width('15%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => { this.showNumbers = false })
-      // Standard keys
       Button('.')
         .fontSize(18)
-        .fontColor(Color.White)
         .width('10%')
         .height(50)
-        .backgroundColor(KEY_COLOR)
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText('.'))
       Button(',')
         .fontSize(18)
-        .fontColor(Color.White)
         .width('10%')
         .height(50)
-        .backgroundColor(KEY_COLOR)
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText(','))
       Button('?')
         .fontSize(18)
-        .fontColor(Color.White)
         .width('10%')
         .height(50)
-        .backgroundColor(KEY_COLOR)
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText('?'))
       Button('!')
         .fontSize(18)
-        .fontColor(Color.White)
         .width('10%')
         .height(50)
-        .backgroundColor(KEY_COLOR)
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText('!'))
       Button("'")
         .fontSize(18)
-        .fontColor(Color.White)
         .width('10%')
         .height(50)
-        .backgroundColor(KEY_COLOR)
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText("'"))
       Button('"')
         .fontSize(18)
-        .fontColor(Color.White)
         .width('10%')
         .height(50)
-        .backgroundColor(KEY_COLOR)
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText('"'))
-      // ABC Key (Special)
       Button('ABC')
         .fontSize(14)
-        .fontColor(Color.White)
         .width('15%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => { this.showNumbers = false })
     }
     .width('100%')
@@ -209,26 +177,20 @@ export struct PolishKeyboard {
 
   buildThirdRow() {
     Row() {
-      // Shift Up Key (Special)
       Button('↑')
         .fontSize(16)
-        .fontColor(Color.White)
         .width('12%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => { this.isUpperCase = !this.isUpperCase })
       ForEach(['z', 'x', 'c', 'v', 'b', 'n', 'm'], (char: string) => {
         this.buildKey(char, this.getPolishVariants(char))
       })
-      // Backspace Key (Special)
       Button('⌫')
         .fontSize(18)
-        .fontColor(Color.White)
         .width('12%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.deleteText())
     }
     .width('100%')
@@ -261,26 +223,20 @@ export struct PolishKeyboard {
 
   buildUpperThirdRow() {
     Row() {
-      // Shift Down Key (Special)
       Button('↓')
         .fontSize(16)
-        .fontColor(Color.White)
         .width('12%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => { this.isUpperCase = !this.isUpperCase })
       ForEach(['Z', 'X', 'C', 'V', 'B', 'N', 'M'], (char: string) => {
         this.buildKey(char, this.getPolishVariants(char))
       })
-      // Backspace Key (Special)
       Button('⌫')
         .fontSize(18)
-        .fontColor(Color.White)
         .width('12%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.deleteText())
     }
     .width('100%')
@@ -290,49 +246,35 @@ export struct PolishKeyboard {
 
   buildFourthRow() {
     Row() {
-      // ?123 Key (Special)
       Button('?123')
         .fontSize(14)
-        .fontColor(Color.White)
         .width('20%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => { this.showNumbers = true })
-      // , Key
       Button(',')
         .fontSize(18)
-        .fontColor(Color.White)
         .width('10%')
         .height(50)
-        .backgroundColor(KEY_COLOR)
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText(','))
-      // Space Key (Special)
       Button(' ')
         .fontSize(14)
         .width('40%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText(' '))
-      // . Key
       Button('.')
         .fontSize(18)
-        .fontColor(Color.White)
         .width('10%')
         .height(50)
-        .backgroundColor(KEY_COLOR)
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText('.'))
-      // Language Switch Key (Special)
       Button(this.currentLanguage)
         .fontSize(14)
-        .fontColor(Color.White)
         .width('20%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => {
           this.currentLanguage = this.currentLanguage === 'PL' ? 'EN' : 'PL'
         })
@@ -343,49 +285,35 @@ export struct PolishKeyboard {
 
   buildUpperFourthRow() {
     Row() {
-      // ?123 Key (Special)
       Button('?123')
         .fontSize(14)
-        .fontColor(Color.White)
         .width('20%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => { this.showNumbers = true })
-      // , Key
       Button(',')
         .fontSize(18)
-        .fontColor(Color.White)
         .width('10%')
         .height(50)
-        .backgroundColor(KEY_COLOR)
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText(','))
-      // Space Key (Special)
       Button(' ')
         .fontSize(14)
         .width('40%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText(' '))
-      // . Key
       Button('.')
         .fontSize(18)
-        .fontColor(Color.White)
         .width('10%')
         .height(50)
-        .backgroundColor(KEY_COLOR)
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => this.insertText('.'))
-      // Language Switch Key (Special)
       Button(this.currentLanguage)
         .fontSize(14)
-        .fontColor(Color.White)
         .width('20%')
         .height(50)
-        .backgroundColor(SPECIAL_KEY_COLOR) // Special Key color
-        .borderRadius(KEY_RADIUS)
+        .backgroundColor(Color.White)
         .onClick(() => {
           this.currentLanguage = this.currentLanguage === 'PL' ? 'EN' : 'PL'
         })
@@ -395,17 +323,16 @@ export struct PolishKeyboard {
   }
 
   buildBottomRow() {
-    // Placeholder for system row
+    // This would be the very bottom system row in Gboard
+    // For now, we'll keep it simple
   }
 
   @Builder buildKey(baseChar: string, popupCharacters: string[]) {
     Button(baseChar)
       .fontSize(18)
-      .fontColor(Color.White)
       .width(this.getKeyWidth(baseChar))
       .height(50)
-      .backgroundColor(KEY_COLOR) // Key color
-      .borderRadius(KEY_RADIUS)
+      .backgroundColor(Color.White)
       .onClick(() => {
         if (!this.showPopup) {
           this.insertText(baseChar)
@@ -435,20 +362,18 @@ export struct PolishKeyboard {
         ForEach(this.popupChars, (char: string) => {
           Button(char)
             .fontSize(16)
-            .fontColor(Color.White)
             .width(40)
             .height(40)
             .margin(2)
-            .backgroundColor(KEY_COLOR) // Pop-up key color
-            .borderRadius(KEY_RADIUS)
+            .backgroundColor(Color.White)
             .onClick(() => {
               this.insertText(char)
               this.hidePopup()
             })
         })
       }
-      .backgroundColor(BACKGROUND_COLOR) // Pop-up background color
-      .border({ width: 1, color: '#505050' })
+      .backgroundColor(Color.White)
+      .border({ width: 1, color: '#CCCCCC' })
       .borderRadius(8)
       .padding(5)
       .shadow({ radius: 10, color: '#000000', offsetX: 0, offsetY: 2 })
@@ -492,11 +417,8 @@ export struct PolishKeyboard {
   private showCharacterPopup(baseChar: string, popupChars: string[], event: TouchEvent): void {
     this.currentBaseChar = baseChar
     this.popupChars = popupChars
-    // Adjust popup position to appear above the key, centered
-    // Needs platform-specific coordinate handling, this is an estimate
-    this.popupX = event.touches[0].screenX - 50 // Use screenX for more accurate global position
-    this.popupY = event.touches[0].screenY - 60 // Move up above the key
-    hilog.info(0x0000, 'OpenBoard', 'Showing popup at X: %{public}d, Y: %{public}d', this.popupX, this.popupY);
+    this.popupX = event.touches[0].x - 50
+    this.popupY = event.touches[0].y - 60
     this.showPopup = true
   }
 
@@ -508,14 +430,12 @@ export struct PolishKeyboard {
 
   private insertText(text: string): void {
     if (this.inputMethodAbility) {
-      hilog.info(0x0000, 'OpenBoard', 'Inserting text: %{public}s', text);
       this.inputMethodAbility.insertText(text)
     }
   }
 
   private deleteText(): void {
     if (this.inputMethodAbility) {
-      hilog.info(0x0000, 'OpenBoard', 'Deleting character');
       this.inputMethodAbility.deleteBackward(1)
     }
   }
