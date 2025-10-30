@@ -26,25 +26,6 @@
      *       DevEco Studio will populate this when you configure signing.
      */
     "signingConfigs": [
-      {
-        "name": "default",
-        "type": "HarmonyOS",
-        "material": {
-          "certpath": "",
-          // Path to your .cer certificate file
-          "keyAlias": "",
-          // Your key alias (e.g., "debugKey")
-          "keyPassword": "",
-          // Your encrypted key password
-          "profile": "",
-          // Path to your .p7b provisioning profile
-          "signAlg": "SHA256withECDSA",
-          "storeFile": "",
-          // Path to your .p12 keystore file
-          "storePassword": ""
-          // Your encrypted store password
-        }
-      }
     ],
     /*
      * ========================================

@@ -1,0 +1,17 @@
+{
+  "devices": {
+    "general": [
+      "phone",
+      "tablet"
+    ]
+  },
+  "development": {
+    "addedSysCaps": [
+      "SystemCapability.MiscServices.InputMethodFramework"
+    ]
+  },
+  "production": {
+    "addedSysCaps": [],
+    "removedSysCaps": []
+  }
+}

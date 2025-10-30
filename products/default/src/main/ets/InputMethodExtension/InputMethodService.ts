@@ -1,11 +1,10 @@
-import InputMethodExtensionAbility from '@ohos.inputMethodExtensionAbility';
 import InputMethod from '@ohos.inputMethod';
 import hilog from '@ohos.hilog';
 
 const TAG = '[PolishIME-Service]';
 const DOMAIN_LOG = 0x0020;
 
-export default class InputMethodService extends InputMethodExtensionAbility {
+export default class InputMethodService {
   private customInputPanel: any = null;
 
   onCreate() {

@@ -47,7 +47,7 @@
         "metadata": [
           {
             "name": "ohos.extension.inputmethod",
-            "value": "keyboard_full_screen"
+            "resource": "$profile:input_method_config"
           }
         ]
       }
